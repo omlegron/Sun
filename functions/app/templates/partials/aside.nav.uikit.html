@@ -1,0 +1,593 @@
+<!-- 1 -->
+<nav ui-nav>
+  <ul class="nav" ng-show="data==='Superadmin'">
+    <li class="nav-header m-v-sm hidden-folded">
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="pull-right up"></i>
+        <i class="icon fa fa-home i-20"></i>
+        <span class="font-normal">Dashboard</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="hommy.dashboard">Statistik</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="hommy.cobs">Global News</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-bullhorn i-20"></i>
+        <span class="font-normal">Verifications</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer">Investor</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect">Statistik Income</a>
+        </li>
+      </ul>
+    </li>
+        <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-users i-20"></i>
+        <span class="font-normal">Group Creation</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer">Peternak</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.contract">Contract</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-users i-20"></i>
+        <span class="font-normal">Forum Creation</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.material">KIMAP</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-question i-20"></i>
+        <span class="font-normal">Conduct Polls</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.segment">Segment</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.sector">Sector</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.productsegment">Product Segment</a>
+        </li>
+      </ul>      
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-university i-20"></i>
+        <span class="font-normal">Manage Event</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.propurcreport">Selling In Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.purcbymonthdist">Selling In Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.invoice_report">Selling Out Detail Report</a>
+        </li>
+      </ul>            
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+
+        <i class="icon fa fa-cog fa-spin i-20" aria-hidden="true"></i>
+        <span class="font-normal">CPanels</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="hommy.sadmin">Account Sadmin</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.sector">Account Uadmin</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.productsegment">Account hommy</a>
+        </li>
+      </ul>      
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.industrytype">Hak Akses</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.provkel">Backup DB</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.regency">Tag Account</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple ui-sref="component.profile">
+        <i class="icon mdi-action-perm-contact-cal i-20"></i>
+        <span>My Profile</span>
+      </a>
+    </li>
+    <li>
+      <a md-ink-ripple ui-sref="component.upload">
+        <i class="icon mdi-file-cloud-upload i-20"></i>
+        <span>Upload</span>
+      </a>
+    </li>
+    <li>
+      <a md-ink-ripple style="cursor:pointer" ui-sref="logout">
+        <i class="icon mdi-action-exit-to-app i-20"></i>
+        <span>Logout</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 --><!-- 2 -->
+  <ul class="nav" ng-show="data === 'Admin'">
+    <li class="nav-header m-v-sm hidden-folded">
+    </li>
+    <li ui-sref-active="active">
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="pull-right up"></i>
+        <i class="icon fa fa-dashboard i-20"></i>
+        <span class="font-normal">Dashboard</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="app.dashboard">DAS Performance</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="pull-right up"></i>
+        <i class="icon fa fa-money i-20"></i>
+        <span class="font-normal">Transaction</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesin">Sales In</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesOrder">Sales Order</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesInvoice">Sales Invoice</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-flag i-20"></i>
+        <span class="font-normal">Region</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.sam">SAM</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-truck i-20"></i>
+        <span class="font-normal">Distributor</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.distributor">Distributor</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.admindist">Admin Distributor</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesman">Salesman</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.diststock">Distributor Stock</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-users i-20"></i>
+        <span class="font-normal">Customer</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer">Customer</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect">Prospect</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.account">Account</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.contract">Contract</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.site">Site</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.equipment">Equipment</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.custstock">Customer Stock</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-files-o i-20"></i>
+        <span class="font-normal">Report</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.propurcreport">Selling In Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.purcbymonthdist">Selling In Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.invoice_report">Selling Out Detail Report</a>
+        </li>
+      </ul>            
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.invoice_report_monthly">Selling Out Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.comppurcandsaledist">Sales In-Out Summary Report</a>
+        </li>
+      </ul>      
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer_report">Customer Database Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect_report">Customer Prospect Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect_summary">Customer Prospect Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer_summary">Customer Database Summary Report</a>
+        </li>
+      </ul>      
+    </li>
+    <li>
+      <a md-ink-ripple ui-sref="component.profile">
+        <i class="icon mdi-action-perm-contact-cal i-20"></i>
+        <span>My Profile</span>
+      </a>
+    </li>
+    <li>
+      <a md-ink-ripple ui-sref="auth.logout">
+        <i class="icon mdi-action-exit-to-app i-20"></i>
+        <span>Logout</span>
+      </a>
+    </li>
+  </ul>
+
+<!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 --><!-- 3 -->
+  <ul class="nav" ng-show="data === 'Addd'">
+    <li class="nav-header m-v-sm hidden-folded">
+    </li>
+    <li ui-sref-active="active">
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="pull-right up"></i>
+        <i class="icon fa fa-dashboard i-20"></i>
+        <span class="font-normal">Dashboard</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="app.dashboard">Sales Performance</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="pull-right up"></i>
+        <i class="icon fa fa-money i-20"></i>
+        <span class="font-normal">Transaction</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesOrder">Sales Order</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesInvoice">Sales Invoice</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-truck i-20"></i>
+        <span class="font-normal">Distributor</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.admindist">Admin Distributor</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.salesman">Salesman</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.diststock">Distributor Stock</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-users i-20"></i>
+        <span class="font-normal">Customer</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer">Customer</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect">Prospect</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.account">Account</a>
+        </li>
+      </ul>
+      <!-- <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.contract">Contract</a>
+        </li>
+      </ul> -->
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.site">Site</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.equipment">Equipment</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.custstock">Customer Stock</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-location-arrow i-20"></i>
+        <span class="font-normal">Visit Plan</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.visitplan">Visit Plan</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple>
+        <span class="pull-right text-muted">
+          <i class="fa fa-caret-down"></i>
+        </span>
+        <i class="icon fa fa-files-o i-20"></i>
+        <span class="font-normal">Report</span>
+      </a>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.propurcreport">Selling In Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.purcbymonthdist">Selling In Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.invoice_report">Selling Out Detail Report</a>
+        </li>
+      </ul>            
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.invoice_report_monthly">Selling Out Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.comppurcandsaledist">Sales In-Out Summary Report</a>
+        </li>
+      </ul>      
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect_report">Customer Prospect Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.prospect_summary">Customer Prospect Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer_report">Customer Database Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer_summary">Customer Database Summary Report</a>
+        </li>
+      </ul>      
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customer_acquisition">Customer Acquisition Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customervisitdetail">Customer Visit Detail Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.customervisitsummary">Customer Visit Summary Report</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sub">
+        <li ui-sref-active="active">
+          <a md-ink-ripple ui-sref="component.newproduct">New Product Detail Report</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a md-ink-ripple ui-sref="component.profile">
+        <i class="icon mdi-action-perm-contact-cal i-20"></i>
+        <span>My Profile</span>
+      </a>
+    </li>
+    <li>
+      <a md-ink-ripple ui-sref="auth.logout">
+        <i class="icon mdi-action-exit-to-app i-20"></i>
+        <span>Logout</span>
+      </a>
+    </li>
+  </ul>  
+</nav>

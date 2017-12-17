@@ -1,0 +1,55 @@
+<div class="modal" role="dialog" id="lookData" >
+
+ <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+     <button class="close" ng-click="lookData.hide()" type="button">x</button>
+     <h4 class="modal-title">Create Bookmark</h4>
+   </div>
+   <div class="modal-body">
+    <form class="form-horizontal">
+
+        <div class="box box-info">
+          <div class="box-header">
+            <h3 class="box-title">Account</h3>
+          </div>
+          <!-- glyphicon glyphicon-user -->
+          <div class="box-body">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+              <input ng-model="superadmin.username" type="text" name="username" id="username" class="form-control" placeholder="Username" readonly>
+            </div>
+            <br/>
+            <div class="input-group">                
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              <input ng-model="superadmin.email" type="email" name="email" class="form-control" placeholder="Email" readonly>
+            </div>
+            <br/>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-users"></i></span>
+              <input ng-model="superadmin.level" name="password" id="password" class="form-control" placeholder="Level" readonly>
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input ng-model="superadmin.nama" type="text" name="nama" id="nama" class="form-control" placeholder="Name" readonly>
+              </div>
+              <br/>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="text" class="form-control" placeholder="No Telp" id="hp" name="hp" ng-model="superadmin.hp" readonly>
+              </div>
+              <br/>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                <input type="text" class="form-control" placeholder="Date" id="hp" name="hp" ng-model="superadmin.created_at" readonly>
+              </div>
+              <br/>
+          </div><!-- /.box-body -->
+        </div><!-- /.box -->
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>

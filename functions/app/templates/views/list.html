@@ -1,0 +1,122 @@
+<!-- <div class="container">
+     <ng-include src="'templates/nav.tmpl.html'"></ng-include>
+<div class="create-bookmark-icon">
+   <button type="button" class="btn btn-primary btn-circle" ng-click="showCreateBookmarkModal();">
+   <span class="icon-pencil"></span></button>
+</div>
+
+<div class="bookmark-list-container">
+  <div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover table-striped table-bordered bookmark-list">
+      <thead >
+        <tr >
+          <th class="column-width">Bookmark</th>
+          <th >Description</th>
+          <th >Link</th>
+          <th >Tags</th>
+          <th >Time
+             <span ng-click="changeOrder('created_at');" class="icon-arrow-up sorting-icon"></span>
+             <span ng-click="changeOrder('-created_at');" class="icon-arrow-down sorting-icon"></span>
+          </th>
+          <th class="column-width">Edit / Delete</th>
+        </tr>
+      </thead>
+
+       <tbody>
+         <tr>
+           <th><input ng-disabled="true" class="form-control" type="text"/></th>
+           <th><input ng-model="search.description" class="form-control" type="text"/></th>
+           <th><input ng-model="search.link" class="form-control" type="text"/></th>
+           <th><input ng-model="search.tags" class="form-control" type="text"/></th>
+           <th><input bs-datepicker ng-model="search.created_at" class="form-control" type="text"/></th>
+           <th><input ng-disabled="true" class="form-control" type="text"/></th>
+         </tr>
+           <tr class="active " ng-repeat="bm in bookmarks | filter:searchBookmarks | orderBy:sortOrder.order">
+             <td><a target="_blank" href="{{bm.link}}">Open</a></td>
+             <td>{{bm.description}}</td>
+             <td>{{bm.link}}</td>
+             <td>{{bm.tags}}</td>
+             <td>{{bm.created_at | date:"dd-MM-yyyy' ,' hh:mm:ss a"}} </td>
+             <td>
+               <span ui-sref="edit({id:bm._id})" class="icon-edit edit-action"></span>
+               <span ng-click="showDeleteBookmarkModal(bm)" class="icon-trash delete-action"></span>
+             </td>
+           </tr>
+       </tbody>
+
+    </table>
+  </div>
+</div>
+</div>
+</div> -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-xs-12">
+        {{$state.current.data.title}}
+        <span class="pull-right">
+         <div class="row">
+          <div class="col-xs-5">
+            <input type="search" class="form-control" placeholder="search..." ng-model="gridOptions.filterOptions.filterText"/>
+          </div>
+          <div class="col-xs-5">
+            <button type="button" ng-show="currentUser.level != 'ADMIN_DIST'" ng-click="go('component/customer/new')" class="btn btn-sm btn-success">
+             <i class="glyphicon glyphicon-plus">
+             </i> Add new customer
+           </button>
+           
+         </div>
+         <div class="col-xs-1">
+            <button type="button" ng-click="exportData()" class="btn btn-sm btn-info"><i class="fa fa-file-excel-o"></i></button>
+           
+         </div>
+       </div>
+     </span>
+   </div>
+ </div>
+</div>
+<div class="table-responsive">
+  <div class="ngGrid">
+      <table>
+      <thead >
+        <tr >
+          <th class="column-width">Bookmark</th>
+          <th >Description</th>
+          <th >Link</th>
+          <th >Tags</th>
+          <th >Time
+             <span ng-click="changeOrder('created_at');" class="icon-arrow-up sorting-icon"></span>
+             <span ng-click="changeOrder('-created_at');" class="icon-arrow-down sorting-icon"></span>
+          </th>
+          <th class="column-width">Edit / Delete</th>
+        </tr>
+      </thead>
+
+       <tbody>
+         <tr>
+           <th><input ng-disabled="true" class="form-control" type="text"/></th>
+           <th><input ng-model="search.description" class="form-control" type="text"/></th>
+           <th><input ng-model="search.link" class="form-control" type="text"/></th>
+           <th><input ng-model="search.tags" class="form-control" type="text"/></th>
+           <th><input bs-datepicker ng-model="search.created_at" class="form-control" type="text"/></th>
+           <th><input ng-disabled="true" class="form-control" type="text"/></th>
+         </tr>
+           <tr class="active " ng-repeat="bm in bookmarks | filter:searchBookmarks | orderBy:sortOrder.order">
+             <td><a target="_blank" href="{{bm.link}}">Open</a></td>
+             <td>{{bm.description}}</td>
+             <td>{{bm.link}}</td>
+             <td>{{bm.tags}}</td>
+             <td>{{bm.created_at | date:"dd-MM-yyyy' ,' hh:mm:ss a"}} </td>
+             <td>
+               <span ui-sref="edit({id:bm._id})" class="icon-edit edit-action"></span>
+               <span ng-click="showDeleteBookmarkModal(bm)" class="icon-trash delete-action"></span>
+             </td>
+           </tr>
+       </tbody>
+</table>
+  </div>
+
+</div>
+</div>

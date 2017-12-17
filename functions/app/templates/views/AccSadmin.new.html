@@ -1,0 +1,104 @@
+<div class="panel panel-default">
+  <form name="regForm" ng-submit="SadminNewController1.signup(sgnData);">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-xs-12">
+          Data Superadmin
+          <h4 align="center" class="alert alert-danger" ng-show="SadminNewController1.errorMsg">{{SadminNewController1.errorMsg}}</h4>
+          <span class="pull-right">
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger btn-filter" title="Back" ng-click="go('hommy/sadmin')"><i class="fa fa-arrow-left"></i> Back</button>
+              <button type="reset" class="btn btn-warning btn-filter" title="Refress"><i class="fa fa-refres"></i> Reset</button>
+              <button type="submit" class="btn btn-success btn-filter" title="Create"><i class="fa fa-arrow-right"></i> Create</button>
+              </div>
+
+
+            <!-- <button type="reset" class="btn btn-sm btn-warning">
+              <i class="fa fa-refres"></i> Reset
+            </button>
+            <button type="submit" class="btn btn-sm btn-success">
+              <i class="fa fa-arrow-right"></i> Create
+            </button> -->
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <!-- Input addon -->
+          <div class="box box-info">
+            <div class="box-header">
+              <h3 class="box-title">Account</h3>
+            </div>
+            <!-- glyphicon glyphicon-user -->
+            <div class="box-body">
+
+              <div class="input-group" ng-class="{ 'has-success':(!SadminNewController1.usernameInvalid), 'has-error':SadminNewController1.usernameInvalid }">
+               <p class="help help-block text-success" ng-show="SadminNewController1.usernameMsg && !regForm.username.$error.required && regForm.username.$valid">{{SadminNewController1.usernameMsg}}</p>
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input ng-model="SadminNewController1.sgnData.username" ng-blur="SadminNewController1.checkUsername(sgnData)" type="text" name="username" id="username" class="form-control" placeholder="Username" required>
+              </div>
+              <br/>
+              
+              <div class="input-group" ng-class="{ 'has-success':(!SadminNewController1.emailInvalid), 'has-error':SadminNewController1.emailInvalid }">
+                <p class="help help-block text-success" ng-show="SadminNewController1.emailMsg && !regForm.email.$error.required && regForm.email.$valid">{{SadminNewController1.emailMsg}}</p>
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input ng-model="SadminNewController1.sgnData.email" ng-blur="SadminNewController1.checkEmail(sgnData)" type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+              </div>
+              <br/>
+             
+             <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
+                <input ng-model="SadminNewController1.sgnData.password" type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+              </div>
+              <br/>
+
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                <div class="form-group">
+                  <select class="form-control" value="Superadmin" name="level" id="level" ng-model="SadminNewController1.sgnData.level" required>
+                    <option value="">-- Select Level --</option>
+                    <option value="Superadmin">Superadmin</option>
+                    <option value="Admin">Admin</option>
+                  </select>
+                </div>
+              </div>
+            </div><!-- /.box-body -->
+          </div><!-- /.box -->
+        </div><!--/.col (left) -->
+
+
+        <!-- right column -->
+        <div class="col-md-6">
+          <!-- general form elements disabled -->
+          <div class="box box-warning">
+            <div class="box-header">
+              <h3 class="box-title">Biodata</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input ng-model="SadminNewController1.sgnData.nama" type="text" name="nama" id="nama" class="form-control" placeholder="Name" required>
+              </div>
+              <br/>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="text" class="form-control" placeholder="No Telp" id="hp" name="hp" ng-model="SadminNewController1.sgnData.hp">
+              </div>
+              <br/>
+            </div><!-- /.box-body -->
+          </div><!-- /.box -->
+        </div><!--/.col (right) -->
+      </div>   <!-- /.row -->
+    </section><!-- /.content -->
+    <br>
+  </form>
+</div>
+
+
+
+

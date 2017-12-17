@@ -1,0 +1,55 @@
+/*.avatar{
+    width: 100px;height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    border: 2px solid #aaa;
+    background-size: cover;
+    margin-left:auto;
+     margin-right:auto;
+     margin-top:auto;
+     margin-bottom:auto;
+     left:0;
+     right:0;
+     top:0;
+     bottom:0;
+}*/
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.bg-cardd {
+   position:absolute;
+ margin-left:auto;
+ margin-right:auto;
+ margin-top:auto;
+ margin-bottom:50px;
+ left:0;
+ right:0;
+ top:0;
+ bottom:0px;
+    width: 85%;
+    height: 90%;
+    /*border: 1px solid;*/
+  
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.12), 3px 2px 3px 3px rgba(0, 0, 0, 0.24), 3px 3px 3px 3px rgba(0, 0, 0, 0.12);
+  
+
+/*border-top-left-radius: 15px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 0px;*/
+
+/*border-radius: 15px 15px 0px;*/
+
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 15px;
+}

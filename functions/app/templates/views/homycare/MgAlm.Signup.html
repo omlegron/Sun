@@ -1,0 +1,126 @@
+<div class="container">
+	<div class="col-md-12 main" style="margin-bottom: 70px; ">
+		<div class="left-side" >
+			<div class="col-sm-6">
+				<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}" options="{scaleControl: true}" event-ready="onMapReady($ngMap)">
+					<ng-map id="map" center="{{MgSignup.sgnData.lat}}, {{MgSignup.sgnData.lng}}" zoom="13" default-style="false" style="height:1000px;">
+					<marker position="{{MgSignup.sgnData.lat}}, {{MgSignup.sgnData.lng}}"></marker>
+					<div class="ng-map-marker" lat="MgSignup.markerPosition.lat()" lng="MgSignup.markerPosition.lng()" draggable="true" event-dragend="onDragEnd($event, $ngMap)">
+						<div class="marker" ng-class="{dragging: $dragging}"></div>
+					</div>
+				</ng-map>
+			</div>
+		</div>
+	</div>
+	<!--col-sm-6-->
+
+	<div class="col-md-6 right-side">
+		<!--Form with header-->
+		<div class="form">
+			<form name="sigForm" ng-submit="MgSignup.signup(sgnData);">
+				<h2>Please Sign Up <small>For Alumni</small></h2>
+				<h4 align="center" class="alert alert-danger" ng-show="MgSignup.errorMsg">{{MgSignup.errorMsg}}</h4>
+				<hr class="colorgraph">
+
+				<div class="md-form-group float-label">
+					<input autofocus ng-model="MgSignup.sgnData.nama" type="text" name="nama" id="nama" class="md-input" required>
+					<label>Name</label>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="md-form-group float-label" ng-class="{ 'has-success':(!MgSignup.usernameInvalid), 'has-error':MgSignup.usernameInvalid }">
+							<input autofocus ng-model="MgSignup.sgnData.username" ng-blur="MgSignup.checkUsername(sgnData)" type="text" name="username" id="username" class="md-input" required>
+							<label>Username</label>
+							<b class="help help-block text-success" ng-show="MgSignup.usernameMsg && !sigForm.username.$error.required && sigForm.username.$valid">{{MgSignup.usernameMsg}}</b>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="md-form-group float-label" ng-class="{ 'has-success':(!MgSignup.emailInvalid), 'has-error':MgSignup.emailInvalid }">							
+							<input ng-model="MgSignup.sgnData.email" ng-blur="MgSignup.checkEmail(sgnData)" type="email" name="email" id="email" class="md-input" required>
+							<label>Email</label>
+							<b class="help help-block text-success" ng-show="MgSignup.emailMsg && !sigForm.email.$error.required && sigForm.email.$valid">{{MgSignup.emailMsg}}</b>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="md-form-group float-label">
+							<input ng-model="MgSignup.sgnData.password" type="password" name="password" id="password" class="md-input">
+							<label>Password</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<div class="md-form-group float-label">
+							<input ng-model="MgSignup.sgnData.nim" type="number" name="nim" id="nim" class="md-input">
+							<label>Nim</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<md-input float-label flex="30"> 
+						<label>Gender</label>
+						<md-select name="type" ng-model="MgSignup.sgnData.gender" name="gender" id="gender" required>
+						<md-option value="Male">Male</md-option>
+						<md-option value="Female">Female</md-option>
+					</md-select>
+				</md-input float-label>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="md-form-group float-label">
+					<input ng-model="MgSignup.sgnData.hp" type="number" name="hp" id="hp" class="md-input">
+					<label>Hp</label>
+				</div>
+			</div>
+		</div>
+		<label><b>WORK ON</b></label>
+		<div class="md-form-group float-label">
+			<input autofocus ng-model="MgSignup.sgnData.company" type="text" name="company" id="company" class="md-input" required>
+			<label>Company Name</label>
+		</div>
+		<div class="md-form-group float-label">
+			<input autofocus ng-model="MgSignup.sgnData.emlrweb" type="text" name="emlrweb" id="emlrweb" class="md-input" required>
+			<label>Email/Website Company</label>
+		</div>
+		<div class="md-form-group float-label">
+			<md-input-container class="md-block">
+			<label>Company Profile</label>
+			<textarea ng-model="MgSignup.sgnData.cp" name="cp" id="cp" md-maxlength="150" md-select-on-focus></textarea>
+		</md-input-container>
+	</div>
+	<div class="md-form-group float-label">
+		<md-input-container class="md-block">
+		<label>Address</label>
+		<textarea ng-model="MgSignup.sgnData.address" md-maxlength="150" name="address" id="address" ng-change="changeAddress(MgSignup.sgnData.address)" ng-model-options='{ debounce: 2000 }' required md-select-on-focus></textarea>
+	</md-input-container>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<div class="md-form-group float-label">
+			<input ng-model="MgSignup.sgnData.lat" type="text" name="lat" id="lat" class="md-input" readonly>
+			<label>Latitude</label>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6">
+		<div class="md-form-group float-label">
+			<input ng-model="MgSignup.sgnData.lng" type="text" name="lng" id="lng" class="md-input" readonly>
+			<label>Longitude</label>
+		</div>
+	</div>
+</div>
+<hr class="colorgraph">
+<div class="row">
+	<div class="col-xs-6 col-sm-6 col-md-6">
+		<button md-ink-ripple type="submit" class="md-btn md-raised blue btn-block p-h-md">Register</button>
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6">
+		<a ui-sref="MgLogin" class="md-btn md-raised red btn-block p-h-md">Sign In</a>
+	</div>
+</div>
+</form>
+</div>
+<!--/Form with header-->
+</div><!--col-sm-6-->
+</div><!--col-sm-8-->
+</div><!--container-->
+

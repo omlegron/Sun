@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-xs-12">
+       Data Superadmin
+      </div>
+ </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="table-responsive">               
+      <table datatable="ng" dt-options="SadminController1.dtOptions" dt-column-defs="SadminController1.dtColumnDefs" class="display compact cell-border" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>First Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Hp</th>
+            <th>Activate Account</th>
+            <th>Level</th>
+            <th><button type="button" ng-click="go('hommy/sadmin/new')" class="btn btn-sm btn-success" title="Add New"><i class="glyphicon glyphicon-plus"></i> Add new</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="person in SadminController1.superadmins">
+            <td>{{$index + 1}}</td>
+            <td>{{person.nama}}</td>
+            <td>{{person.username}}</td>
+            <td>{{person.email}}</td>
+            <td>{{person.hp}}</td>
+            <td>{{person.active}}</td>
+            <td>{{person.level}}</td>
+            <td>
+              <!-- <a ui-sref="hommy.sadminedit({ person:_id })"> -->
+              <button type="button" data-placement="top" title="Edit" class="btn btn-xs btn-default" ng-click="go('hommy/sadmin/edit/'+ person._id +'')">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </button>
+              <!-- </a> -->
+              <button type="button" class="enabledisable-news btn btn-xs btn-default" title="Read" ng-click="showData(person._id);">
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+              <button type="button" data-placement="top" data-toggle="tooltip" title="Delete" class="remove-news btn btn-xs btn-default" data-title="Delete" data-toggle="modal" data-target="#delete" ng-click="SadminController1.deleteSuperadmin(person.username);">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </td>   
+          </tr>
+        </tbody> 
+      </table>
+
+    </div>
+  </div>
+</div>
+</div>
+
