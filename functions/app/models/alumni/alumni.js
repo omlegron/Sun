@@ -5,7 +5,7 @@ var titlize   = require('mongoose-title-case');
 var validate  = require('mongoose-validator');
 
 // var passportLocalMongoose = require('passport-local-mongoose');
-// Superadmin Schema
+// Superadmin Schemaasd
 
 var nameValidator = [
     validate({
