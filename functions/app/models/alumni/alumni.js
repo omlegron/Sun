@@ -7,7 +7,7 @@ var validate  = require('mongoose-validator');
 // var passportLocalMongoose = require('passport-local-mongoose');
 // Superadmin Schema
 
-var namaValidator = [
+var nameValidator = [
     validate({
       validator: 'matches',
      arguments: /^(([a-zA-Z]{3,20})+[ ]+([a-zA-Z]{3,20})+)+$/,
